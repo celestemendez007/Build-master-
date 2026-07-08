@@ -41,7 +41,11 @@ body {
 .text-gray { color: #a1a1aa; }
 .highlight { color: var(--accent); }
 .mt-2 { margin-top: 1rem; }
-
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2.5rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2.5rem; }
+.w-100 { width: 100%; display: block; }
 .text-gradient {
     background: linear-gradient(90deg, var(--accent), #fff);
     -webkit-background-clip: text;
@@ -79,10 +83,7 @@ body {
     height: 60px;
     width: auto;
     object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
-    filter: contrast(1.4) saturate(2.5) brightness(1.15);
 }
 
 .logo:hover .logo-img {
@@ -353,12 +354,7 @@ body {
     color: var(--text);
 }
 
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-    mix-blend-mode: lighten;
-}
+
 
 .features-list li svg {
     color: var(--primary);
@@ -367,14 +363,10 @@ body {
 .card-logo {
     position: relative;
     z-index: 10;
-    height: 60px;
+    height: 110px;
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-}
-
-.tower-logo {
-    height: 100px; /* Compensate for the extra transparent space in the image */
 }
 
 .card-actions {
