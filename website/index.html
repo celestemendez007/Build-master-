@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Master | Innovación y Construcción</title>
+    <meta name="description" content="Fortalece el vínculo entre la educación y la industria de la construcción. Competencias Bridge Master y Tower Master.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="build-master-logo.png" alt="Build Master Logo" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#about">Acerca de</a>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#competitions">Competencias</a>
+                <a href="#past-editions">Ediciones</a>
+                <a href="#aliados">Aliados</a>
+                <a href="#" class="open-comp-modal" data-target="events-modal">Eventos</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">Acerca de</a>
+        <a href="#objetivos" class="mobile-link">Objetivos</a>
+        <a href="#competitions" class="mobile-link">Competencias</a>
+        <a href="#past-editions" class="mobile-link">Ediciones</a>
+        <a href="#aliados" class="mobile-link">Aliados</a>
+        <a href="#" class="mobile-link open-comp-modal" data-target="events-modal">Eventos</a>
+    </div>
+
+    <header class="hero" id="about">
+        <div class="hero-content">
+            <h1 class="hero-title">Forjando el futuro de la <br><span class="text-gradient">Construcción</span></h1>
+            <p class="hero-subtitle">
+                Conectamos el talento estudiantil con oportunidades reales del sector a través de una experiencia educativa y competitiva que despierta el interés por la ingeniería y la arquitectura.
+            </p>
+            <div class="hero-actions">
+                <a href="#competitions" class="btn btn-primary">Descubrir Competencias</a>
+                <button class="btn btn-secondary open-comp-modal" data-target="events-modal">Ver Eventos</button>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </header>
+
+    <section class="section" id="objetivos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestro Propósito</h2>
+                <p>Fortalecer el vínculo entre la educación y la industria de la construcción.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card objective-card">
+                    <div class="objective-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="objective-svg"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <h3>Educación Práctica</h3>
+                    <p>Despertar la curiosidad por la ingeniería y arquitectura mediante experiencias de diseño y construcción reales.</p>
+                </div>
+                <div class="card objective-card">
+                    <div class="objective-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="objective-svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Vínculos Estratégicos</h3>
+                    <p>Fomentar la colaboración entre la industria, centros educativos, estudiantes y mentores.</p>
+                </div>
+                <div class="card objective-card">
+                    <div class="objective-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="objective-svg"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+                    </div>
+                    <h3>Innovación y Liderazgo</h3>
+                    <p>Desarrollar la capacidad de guiar equipos, tomar decisiones y pensar soluciones estructurales creativas bajo presión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark" id="competitions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestras Competencias</h2>
+                <p>Desafíos diseñados para todos los niveles educativos.</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Bridge Master Card -->
+                <div class="card competition-card">
+                    <div class="card-image bridge-bg">
+                        <div class="card-overlay"></div>
+                        <img src="bridge master.png" alt="Bridge Master" class="card-logo">
+                    </div>
+                    <div class="card-content">
+                        <div class="badges">
+                            <span class="badge">Nivel 1</span>
+                            <span class="badge">Nivel 2</span>
+                        </div>
+                        <p class="card-text">
+                            Competencia práctica de diseño y construcción de puentes a escala. Un reto que combina creatividad, estrategia e ingeniería.
+                        </p>
+                        <ul class="features-list">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Nivel 1:</strong> Tercer Ciclo (Puente de Viga)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Nivel 2:</strong> Bachillerato Técnico (Puente de Arco)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Reto:</strong> Resistencia de carga y diseño estético.</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 open-comp-modal" data-target="modal-bridge">Ver Detalles y Eventos</button>
+                </div>
+                </div>
+
+                <!-- Tower Master Card -->
+                <div class="card competition-card">
+                    <div class="card-image tower-bg">
+                        <div class="card-overlay"></div>
+                        <img src="Tower master.png" alt="Tower Master" class="card-logo tower-logo">
+                    </div>
+                    <div class="card-content">
+                        <div class="badges">
+                            <span class="badge">Nivel 3</span>
+                        </div>
+                        <p class="card-text">
+                            Simulación de los retos del diseño estructural de edificios altos, fomentando la innovación y toma de decisiones para talento universitario.
+                        </p>
+                        <ul class="features-list">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Nivel 3:</strong> Educación Superior (Universidades)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Reto:</strong> Construcción vertical, altura mínima 1m</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Prueba:</strong> Resistencia Sísmica y Retos Sorpresa</li>
+                        </ul>
+                        <div class="mt-3">
+                            <button class="btn btn-primary w-100 open-comp-modal" data-target="modal-tower">Ver Detalles y Eventos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="past-editions">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Ediciones Pasadas</h2>
+                <p>Revive los mejores momentos y la emoción de las competencias anteriores.</p>
+            </div>
+            
+            <div class="media-showcase">
+                <div class="video-container">
+                    <video controls>
+                        <source src="WhatsApp Video 2026-07-06 at 10.51.38 AM.mp4" type="video/mp4">
+                        Tu navegador no soporta reproducción de video.
+                    </video>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="WhatsApp Image 2026-07-06 at 10.51.39 AM.jpeg" alt="Edición Pasada 1"></div>
+                    <div class="gallery-item"><img src="WhatsApp Image 2026-07-06 at 10.51.39 AM (1).jpeg" alt="Edición Pasada 2"></div>
+                    <div class="gallery-item"><img src="WhatsApp Image 2026-07-06 at 10.51.40 AM (2).jpeg" alt="Edición Pasada 5"></div>
+                    <div class="gallery-item"><img src="WhatsApp Image 2026-07-06 at 10.51.40 AM (3).jpeg" alt="Edición Pasada 6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark" id="aliados">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="text-light">Aliados Formadores</h2>
+                <p class="text-gray">Nuestros patrocinadores y expertos que hacen posible esta experiencia educativa.</p>
+            </div>
+            
+            <div class="aliados-grid mt-4" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; align-items: center;">
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="Aceros de El Salvador.png" alt="Aceros de El Salvador" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">Aceros de El Salvador</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="EPA.png" alt="EPA" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">EPA</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="FREUND.png" alt="FREUND" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">FREUND</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="HOLCIM.png" alt="HOLCIM" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">Holcim</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="INFRASAL.png" alt="INFRASAL" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">INFRASAL</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="KEY INSTITUTE.png" alt="KEY INSTITUTE" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">Key Institute</h3>
+                </div>
+                <div class="aliado-logo-card text-center">
+                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="VIDRI.png" alt="VIDRI" style="max-width: 150px; height: auto; max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 class="mt-2 text-light" style="font-size: 1rem;">Vidrí</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Bridge Master -->
+    <div id="modal-bridge" class="modal comp-modal">
+        <div class="modal-content bg-dark">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header-content text-center mb-4">
+                <img src="bridge master.png" alt="Bridge Master" class="modal-logo" style="height: 60px;">
+            </div>
+            
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="bridge-info">Resumen y Reglas</button>
+                <button class="tab-btn" data-tab="bridge-docs">Documentos y Descargas</button>
+                <button class="tab-btn" data-tab="bridge-events">Cronograma de Eventos</button>
+            </div>
+            
+            <div class="tab-content active" id="bridge-info">
+                <div class="info-section mt-4">
+                    <h3 class="highlight mb-3">Resumen de la Competencia</h3>
+                    <p><strong>Nivel 1 (Tercer Ciclo):</strong> Puente de Viga (Longitud mín. 1m). Meta de resistencia: 200 lbs.<br>
+                    <strong>Nivel 2 (Bachillerato Técnico):</strong> Puente de Arco (Longitud mín. 1m). Meta de resistencia: 400 lbs.<br>
+                    <strong>Tiempo límite de construcción:</strong> 2 horas y 30 minutos.<br>
+                    <strong>Condición clave:</strong> El puente debe unir dos plataformas sin tocar la superficie inferior ni apoyos externos.</p>
+                    
+                    <h3 class="highlight mt-4 mb-3">Kit de Materiales Permitidos</h3>
+                    <ul>
+                        <li>Paletas de madera: 600 (Nivel 1) / 900 (Nivel 2)</li>
+                        <li>Barras de silicón: 25 (Nivel 1) / 35 (Nivel 2) y 1 pistola.</li>
+                        <li>1 rollo de cinta adhesiva, 1 tijera, 1 tenaza.</li>
+                        <li><em>*Estrictamente prohibido usar materiales ajenos al kit oficial.</em></li>
+                    </ul>
+
+                    <h3 class="highlight mt-4 mb-3">Criterios de Evaluación</h3>
+                    <div class="badges">
+                        <span class="badge outline">Resistencia de Carga (30%)</span>
+                        <span class="badge outline">Independencia (15%)</span>
+                        <span class="badge outline">Dimensiones (10%)</span>
+                        <span class="badge outline">Uso Materiales (10%)</span>
+                        <span class="badge outline">Tiempo (10%)</span>
+                        <span class="badge outline">Estética (10%)</span>
+                        <span class="badge outline">Retos Sorpresa (10%)</span>
+                        <span class="badge outline">Limpieza (5%)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="bridge-docs">
+                <div class="docs-grid mt-4">
+                    <a href="Boletín 02 Competencia.pdf" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Ver Indicaciones Oficiales
+                    </a>
+                    <a href="Hoja de Inscripción BM.pdf" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Hoja de Inscripción
+                    </a>
+                    <a href="Bridge Master 2025  - Carta de Autorización.pdf" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Carta de Autorización
+                    </a>
+                    <div class="rubrics-box bg-darker p-4 rounded mt-4">
+                        <h4 class="text-light mb-3 text-center border-bottom pb-2">Rúbricas de Evaluación</h4>
+                        <a href="RUBRICA NIVEL 1.pdf" download class="btn btn-primary w-100 mb-3">
+                            Descargar Rúbrica Nivel 1 (Tercer Ciclo)
+                        </a>
+                        <a href="RUBRICA NIVEL 2.pdf" download class="btn btn-primary w-100">
+                            Descargar Rúbrica Nivel 2 (Bachillerato)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="bridge-events">
+                <div class="timeline mt-4">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">25 DE JULIO</div>
+                            <h3 class="timeline-title">Lanzamiento Oficial (Kickoff)</h3>
+                            <p>Presentación oficial de Bridge Master 2026, presentación de los retos de construcción, normas y conformación de equipos para Nivel 1 y 2.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">MASTER CLASS</div>
+                            <h3 class="timeline-title">Master Class para Docentes</h3>
+                            <p>Sesión informativa para docentes. Temas: Importancia de los puentes, fuerzas actuantes, partes principales y causas de falla.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">AGOSTO</div>
+                            <h3 class="timeline-title">Talleres Prácticos (Workshops)</h3>
+                            <p>Capacitación esencial antes de la competencia. Incluye retos de diseño, prototipado, y armado de puentes bajo el concepto de "Distribución de Cargas".</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight-item">
+                        <div class="timeline-dot glow"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date accent">22 DE AGOSTO</div>
+                            <h3 class="timeline-title">Día de la Competencia (Bridge Master)</h3>
+                            <p>Desarrollo del reto final en 2 horas y 30 minutos. Se evaluará la resistencia (Viga para N1, Arco para N2) e incluirá retos sorpresa. ¡A darlo todo!</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight-item">
+                        <div class="timeline-dot glow" style="box-shadow: 0 0 10px #ff3366; background: #ff3366;"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" style="color: #ff3366;">22 DE AGOSTO</div>
+                            <h3 class="timeline-title">Día de la Competencia (Tower Master)</h3>
+                            <p>Reto de construcción de torres. Se evaluará resistencia sísmica y toma de decisiones bajo presión con retos sorpresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tower Master -->
+    <div id="modal-tower" class="modal comp-modal">
+        <div class="modal-content bg-dark">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header-content text-center mb-4">
+                <img src="Tower master.png" alt="Tower Master" class="modal-logo" style="height: 60px;">
+            </div>
+            
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="tower-info">Resumen y Reglas</button>
+                <button class="tab-btn" data-tab="tower-docs">Documentos y Descargas</button>
+                <button class="tab-btn" data-tab="tower-events">Cronograma de Eventos</button>
+            </div>
+            
+            <div class="tab-content active" id="tower-info">
+                <div class="info-section mt-4">
+                    <h3 class="highlight mb-3">Resumen de la Competencia</h3>
+                    <p><strong>Nivel 3 (Educación Superior):</strong> 1.º y 2.º año de universidad.<br>
+                    <strong>Reto:</strong> Diseñar y construir una estructura vertical.<br>
+                    <strong>Especificaciones:</strong> Altura mínima de 1.00 metro. Base máxima de 40 × 40 cm.<br>
+                    <strong>Condición clave:</strong> No podrá fijarse al piso ni recibir apoyos externos. Debe mantenerse estable por sí sola.<br>
+                    <strong>Tiempo límite de construcción:</strong> 2 horas y 30 minutos.</p>
+                    
+                    <h3 class="highlight mt-4 mb-3">Kit de Materiales Permitidos</h3>
+                    <ul>
+                        <li>Pinchos de madera: 900</li>
+                        <li>Pistola de silicón: 2</li>
+                        <li>Barras de silicón: 25</li>
+                        <li>1 tijera, 1 tenaza.</li>
+                        <li><em>*Estrictamente prohibido usar materiales ajenos al kit oficial.</em></li>
+                    </ul>
+
+                    <h3 class="highlight mt-4 mb-3">Evaluación Principal</h3>
+                    <p>La estructura será sometida a <strong>Pruebas de Resistencia Sísmica</strong>. Además, durante el evento habrá Misiones Sorpresa en vivo para evaluar adaptación y trabajo en equipo.</p>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tower-docs">
+                <div class="docs-grid mt-4">
+                    <a href="Boletín 01 Convocatoria TM.odt" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Ver Indicaciones Oficiales
+                    </a>
+                    <a href="Hoja de Inscripción BM.pdf" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Hoja de Inscripción
+                    </a>
+                    <a href="Bridge Master 2025  - Carta de Autorización.pdf" download class="btn btn-secondary w-100 mb-3 d-flex align-center justify-center">
+                        Carta de Autorización
+                    </a>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tower-events">
+                <div class="timeline mt-4">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">25 DE JULIO</div>
+                            <h3 class="timeline-title">Lanzamiento Oficial (Kickoff)</h3>
+                            <p>Presentación oficial de Tower Master 2026, normativas y conformación de equipos universitarios (Nivel 3).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">MASTER CLASS</div>
+                            <h3 class="timeline-title">Master Class Universitaria</h3>
+                            <p>Fundamentos de las edificaciones verticales, sistemas estructurales, resistencia sísmica y estrategias para el diseño de torres eficientes.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">AGOSTO</div>
+                            <h3 class="timeline-title">Talleres Prácticos (Workshops)</h3>
+                            <p>Simulación de retos estructurales y preparación intensa para la construcción de edificaciones a escala mínima de 1 metro.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight-item">
+                        <div class="timeline-dot glow"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date accent">22 DE AGOSTO</div>
+                            <h3 class="timeline-title">Día de la Competencia (Bridge Master)</h3>
+                            <p>Desarrollo del reto final en 2 horas y 30 minutos. Se evaluará la resistencia (Viga para N1, Arco para N2) e incluirá retos sorpresa. ¡A darlo todo!</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight-item">
+                        <div class="timeline-dot glow" style="box-shadow: 0 0 10px #ff3366; background: #ff3366;"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" style="color: #ff3366;">22 DE AGOSTO</div>
+                            <h3 class="timeline-title">Día de la Competencia (Tower Master)</h3>
+                            <p>Reto de construcción de torres. Se evaluará resistencia sísmica y toma de decisiones bajo presión con retos sorpresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="events-modal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Cronograma de Eventos</h2>
+                <p>Fechas importantes y actividades rumbo a la competencia final.</p>
+            </div>
+            
+            <div class="timeline mt-4">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">25 DE JULIO</div>
+                        <h3 class="timeline-title">Lanzamiento Oficial (Kickoff)</h3>
+                        <p>Presentación oficial, normativas y conformación de equipos para todos los niveles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">MASTER CLASS</div>
+                        <h3 class="timeline-title">Master Class para Docentes y Estudiantes</h3>
+                        <p>Sesión informativa y fundamentos técnicos esenciales para la competencia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">AGOSTO</div>
+                        <h3 class="timeline-title">Talleres Prácticos (Workshops)</h3>
+                        <p>Capacitación y preparación intensiva sobre distribución de cargas y diseño.</p>
+                    </div>
+                </div>
+                <div class="timeline-item highlight-item">
+                    <div class="timeline-dot glow"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date accent">22 DE AGOSTO</div>
+                        <h3 class="timeline-title">Día de la Competencia (Bridge Master)</h3>
+                        <p>Desarrollo del reto final en 2 horas y 30 minutos. Se evaluará la resistencia (Viga para N1, Arco para N2) e incluirá retos sorpresa. ¡A darlo todo!</p>
+                    </div>
+                </div>
+                <div class="timeline-item highlight-item">
+                    <div class="timeline-dot glow" style="box-shadow: 0 0 10px #ff3366; background: #ff3366;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: #ff3366;">22 DE AGOSTO</div>
+                        <h3 class="timeline-title">Día de la Competencia (Tower Master)</h3>
+                        <p>Reto de construcción de torres. Se evaluará resistencia sísmica y toma de decisiones bajo presión con retos sorpresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Build <span class="highlight">Master</span></h3>
+                <p>Una iniciativa de Grupo ECON, S.A. de C.V.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Acerca de</a>
+                <a href="#competitions">Competencias</a>
+                <a href="#aliados">Aliados</a>
+                <a href="#" class="open-comp-modal" data-target="events-modal">Eventos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Build Master. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
