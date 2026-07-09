@@ -79,4 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Lógica para la Agenda en la Línea de Tiempo ---
+    const timelineContents = document.querySelectorAll('.timeline-content');
+    timelineContents.forEach(content => {
+        // Al hacer clic, se abre/cierra la agenda togglenado la clase active en el contenedor principal
+        const item = content.closest('.timeline-item');
+        content.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
 });

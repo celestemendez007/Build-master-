@@ -428,40 +428,46 @@ body {
 .timeline-item {
     position: relative;
     margin-bottom: 3rem;
-    width: 50%;
-    padding-right: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     left: 0;
+    padding: 0;
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
-    padding-right: 0;
-    padding-left: 3rem;
+    flex-direction: row-reverse;
 }
 
 .timeline-dot {
     position: absolute;
     top: 0;
-    right: -8px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: var(--primary-light);
     border: 3px solid var(--dark-bg);
+    z-index: 10;
 }
 
+/* For even items, we just reuse the center alignment */
 .timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
-    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .timeline-content {
+    width: calc(50% - 3rem);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .timeline-content:hover {
@@ -486,6 +492,79 @@ body {
 .timeline-content p {
     color: #a1a1aa;
     font-size: 0.9rem;
+}
+
+/* Agenda del Día (Hover/Click) */
+
+/* Base: Desktop Flex layout (a la par) */
+.agenda-table-container {
+    width: calc(50% - 3rem); /* toma la otra mitad de la línea de tiempo */
+    background: var(--dark-bg);
+    border: 1px solid var(--accent);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    
+    /* Estado de Animación: Oculto */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 0.6s ease, opacity 0.4s ease, margin 0.4s ease, padding 0.4s ease;
+    
+    padding: 0 1.5rem; /* Sin padding vertical cuando está oculto */
+    margin-top: 0;
+}
+
+/* Al hacer hover o estar activo, se expande la altura y el padding empujando lo de abajo */
+.timeline-item.active .agenda-table-container,
+.timeline-content:hover + .agenda-table-container,
+.agenda-table-container:hover {
+    max-height: 800px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding: 1.5rem;
+}
+
+/* Elementos internos de la Agenda */
+.agenda-title {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.agenda-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.agenda-table th, .agenda-table td {
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+
+.agenda-table th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.agenda-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.agenda-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Highlighted Timeline Item */
@@ -572,16 +651,19 @@ body {
         left: 20px;
     }
     .timeline-item {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
+        flex-direction: column;
+        padding-left: 50px !important;
+        justify-content: flex-start;
     }
     .timeline-item:nth-child(even) {
-        left: 0;
-        padding-left: 50px;
+        flex-direction: column;
+    }
+    .timeline-content {
+        width: 100%;
     }
     .timeline-dot, .timeline-item:nth-child(even) .timeline-dot {
         left: 12px;
+        transform: none;
         right: auto;
     }
     .footer-content {
@@ -590,6 +672,27 @@ body {
     }
     .footer-links a {
         margin: 0 0.75rem;
+    }
+    
+    /* Mobile Agenda Fallback: Accordion style */
+    .agenda-table-container {
+        width: 100%;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 0;
+    }
+    
+    .timeline-item.active .agenda-table-container,
+    .timeline-content:hover + .agenda-table-container,
+    .agenda-table-container:hover {
+        padding: 0;
+        margin-top: 1rem;
+        max-height: 800px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 }
 
